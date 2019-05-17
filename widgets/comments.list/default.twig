@@ -1,0 +1,61 @@
+{% block html %}
+	
+	{% if not widget.getParam('ajaxCall') %}
+		<div id="{{ widget.getUniqueId() }}-wrapper">
+	{% endif %}	
+	
+	{% if widget.widgetTitle %}<h3>{{ widget.getWidgetTitle }}</h3>{% endif %}	
+	
+	{% for m in widget.comments %}    
+	    <a name="comment-{{ m.id }}"></a>
+        <div class="media-object">
+			{% if widget.getParam('rating') and m.rating %}
+				<div class="fa-lg float-right">
+				{% for i in range(1,5) %}<i class="fa-star {% if i <= m.rating %}fas{% else %}far{% endif %}">&nbsp;</i>{% endfor %}
+				</div>
+			{% endif %}			
+            <div class="media-object-section show-for-large">
+                 <div class="thumbnail"><img src="{{ m.avatar }}" alt="{{ m.nickname }}" style="background:#bbb;width:45px;height:45px;"></div>
+            </div>
+			<div class="media-object-section">
+				<span class="text-dark-gray">{{ m.nickname }}, &nbsp; {{ m.dat|date('Y.m.d H:i') }}</span>
+			</div>		
+        </div>
+        <p>{{ m.comment|raw }}</p><br>    
+	{% endfor %}
+
+	{% if widget.getParam('paginator') %}
+		<div class="x-pages">
+			{{ widget.getPaginator()|raw }}
+		</div>
+	{% endif %}		
+	
+	{% if not widget.getParam('ajaxCall') %}
+		</div>	
+		{% if widget.getParam('form') %}
+		<div id="{{ widget.getUniqueId() }}-form">
+			{{ widget.getForm()|raw }}
+		</div>
+		{% endif %}	
+	{% endif %}
+	
+{% endblock %}
+
+
+{% embed "@widget/_common/ajax-paginator.twig" %}
+	{% block script %}
+		{{ parent() }}
+		{% if widget.getParam('ajax') and not widget.getParam('ajaxCall') %}
+		document.addEventListener('DOMContentLoaded', function () {
+			{{ widget.uniqueId|replace({'-':'_'}) }}_hook_comment();
+		});		
+		function {{ widget.uniqueId|replace({'-':'_'}) }}_hook_comment(){
+			var form = document.querySelector("#{{ widget.uniqueId }}-form .x-form");
+			form.addEventListener('new_comment', function () {							
+				{{ widget.uniqueId|replace({'-':'_'}) }}_loadpage( {{ widget.uniqueId|replace({'-':'_'}) }}_currentpage );								
+				{{ widget.uniqueId|replace({'-':'_'}) }}_hook_comment();
+			});		
+		}
+		{% endif %}
+	{% endblock %}
+{% endembed %}

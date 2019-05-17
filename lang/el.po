@@ -1,0 +1,81 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Модуль \"Торговля\"\n"
+"POT-Creation-Date: 2017-05-05 08:40+0300\n"
+"PO-Revision-Date: 2017-05-11 16:15+0300\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.1\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: _;translate\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Last-Translator: \n"
+"Language: el\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: ext/Widget.js:18
+msgid "Материал"
+msgstr "Υλικό"
+
+#: ext/Widget.js:33
+msgid "Страницы"
+msgstr "Σελίδα"
+
+#: ext/Widget.js:39
+msgid "комментариев на странице"
+msgstr "παρατηρήσεις σχετικά με την σελίδα"
+
+#: ext/Widget.js:48
+msgid "показать навигацию"
+msgstr "πλοήγησης παράσταση"
+
+#: ext/Widget.js:63
+msgid "query параметр"
+msgstr "query παράμετρος"
+
+#: ext/Widget.js:69
+msgid "ссылка на страницу"
+msgstr "σύνδεσμο προς τη σελίδα"
+
+#: classes/Comments/WidgetAdd.php:22 classes/Comments/WidgetList.php:35
+msgid "Оцените материал"
+msgstr "Βαθμολογήστε αυτό το άρθρο"
+
+#: classes/Comments/WidgetAdd.php:23 classes/Comments/WidgetList.php:37
+msgid "Отправить сообщение"
+msgstr "Στείλτε ένα μήνυμα"
+
+#: classes/Comments/WidgetAdd.php:24 classes/Comments/WidgetList.php:38
+msgid "Ваш комментарий принят"
+msgstr "Το σχόλιό σας λάβει"
+
+#: classes/Comments/WidgetAdd.php:87
+msgid "Проверка не пройдена"
+msgstr "Επικύρωση αποτυγχάνει"
+
+#: classes/Comments/WidgetList.php:36
+msgid "Добавить комментарий"
+msgstr "Προσθέστε ένα σχόλιο"
+
+#: config.php:21 config.php:39
+msgid "Комментарии"
+msgstr "Σχόλια"
+
+#: config.php:30
+msgid "Модераторы комментариев"
+msgstr "Συντονιστές σχόλια"
+
+#: lang/messages.php:2
+msgid "Представьтесь"
+msgstr "Καθιέρωση"
+
+#: lang/messages.php:3
+msgid "Текст комментария"
+msgstr "Το σχόλιό σας"
+
+#: widgets/comments.add/default.twig:21
+msgid "Ваше имя для комментария"
+msgstr "Το όνομά Τα σχόλια σας"

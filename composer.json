@@ -1,0 +1,26 @@
+{
+    "name": "cetera-labs/plugin-comments",
+    "type": "cetera-cms-plugin",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Roman Romanov",
+            "email": "nicodim@mail.ru",
+            "role": "Lead Developer"
+        }
+    ],
+    
+    "minimum-stability": "dev",
+    
+    "autoload": {
+        "psr-0": { 
+			"Comments\\": "classes/"
+		}
+    },
+
+    "extra": {
+        "name": "comments",
+        "title": "Комментарии",
+        "description": "Возможность комментировать материалы"
+    }
+} 
