@@ -1,5 +1,6 @@
 {
     "name": "cetera-labs/plugin-comments",
+    "description": "Cetera CMS Comments Plugin",
     "type": "cetera-cms-plugin",
     "license": "MIT",
     "authors": [
@@ -23,4 +24,4 @@
         "title": "Комментарии",
         "description": "Возможность комментировать материалы"
     }
-} 
+}
