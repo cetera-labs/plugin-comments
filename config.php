@@ -2,11 +2,7 @@
 $t = $this->getTranslator();
 $t->addTranslation(__DIR__.'/lang');
 
-try {
-    $od = null;
-	$od = \Cetera\ObjectDefinition::findByAlias( 'comments' );
-}
-catch (\Exception $e) {}
+$od = \Cetera\ObjectDefinition::findByAlias( 'comments' );
 
 if ($od) {
 	$od->registerClass( $od->id , '\Comments\Comment' );
