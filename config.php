@@ -2,9 +2,13 @@
 $t = $this->getTranslator();
 $t->addTranslation(__DIR__.'/lang');
 
-try
-{
+try {
+    $od = null;
 	$od = \Cetera\ObjectDefinition::findByAlias( 'comments' );
+}
+catch (\Exception $e) {}
+
+if ($od) {
 	$od->registerClass( $od->id , '\Comments\Comment' );
 
 	\Cetera\Material::addPlugin( '\Comments\Plugin' );
@@ -42,6 +46,4 @@ try
 		));
 
 	}
-
 }
-catch (\Exception $e) {}
