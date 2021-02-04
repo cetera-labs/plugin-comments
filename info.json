@@ -1,9 +1,0 @@
-{
-    "version": "6.8",
-    "cms_version_min": "3.40.0",
-	"title": "Comments",
-    "title_ru": "Комментарии",
-	"description": "",
-    "description_ru": "Возможность комментировать материалы",
-    "author": "<a href='http://www.cetera.ru'>Roman Romanov</a>"
-}
