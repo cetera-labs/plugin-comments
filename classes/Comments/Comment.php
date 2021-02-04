@@ -3,7 +3,18 @@ namespace Comments;
 
 class Comment extends \Cetera\Material
 {
+    const TABLE = 'comments';
 		
+	public static function getById($id, $type = 0, $table = NULL)
+    {
+		return parent::getById($id,  self::getObjectDefinition() );
+    }	
+	
+	public static function getObjectDefinition()
+	{
+		return \Cetera\ObjectDefinition::findByAlias(static::TABLE);
+	}        
+        
 	public function getNickname()
 	{
 		if ($this->fields['nickname']) return $this->fields['nickname'];

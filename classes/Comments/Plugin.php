@@ -9,11 +9,7 @@ class Plugin extends \Cetera\ObjectPlugin
 	
 	public static function getCommentsObjectDefinition()
 	{
-		if (!self::$objectDefinition)
-		{
-			self::$objectDefinition = \Cetera\ObjectDefinition::findByAlias('comments');
-		}
-		return self::$objectDefinition;
+		return Comment::getObjectDefinition();
 	}
 	
 	public function getCommentsCount()
