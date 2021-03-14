@@ -23,7 +23,7 @@ if ($od) {
 		'name'    => 'Comments.List',
 		'class'   => '\\Comments\\WidgetList',
 		'describ' => $t->_('Комментарии'),
-		'icon'    => 'images/icon.png',
+		'icon'    => '/cms/plugins/comments/images/icon.png',
 		'ui'      => 'Plugin.comments.Widget',
 	));
 
@@ -41,7 +41,8 @@ if ($od) {
 				'id'	   => 'comments',
 				'position' => MENU_SITE,
 				'name' 	   => $t->_('Комментарии'),
-				'icon'     => 'images/icon.png',
+				'icon'     => '/cms/plugins/comments/images/icon.png',
+                'iconCls'  => 'x-fa fa-comments',
 				'class'    => 'Plugin.comments.Panel'
 		));
 
