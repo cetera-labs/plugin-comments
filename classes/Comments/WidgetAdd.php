@@ -55,7 +55,7 @@ class WidgetAdd extends \Cetera\Widget\Templateable
 			$this->application->addScript('https://www.google.com/recaptcha/api.js');
 		}
 		
-		if ($_COOKIE['comments-status']) {
+		if (isset($_COOKIE['comments-status'])) {
 			$this->statusText = $_COOKIE['comments-status'];
 			setcookie('comments-status', false);
 		}
