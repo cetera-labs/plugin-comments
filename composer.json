@@ -1,6 +1,6 @@
 {
     "name": "cetera-labs/plugin-comments",
-    "description": "Cetera CMS Comments Plugin",
+    "description": "Fastsite CMS Comments Plugin",
     "type": "cetera-cms-plugin",
     "license": "MIT",
     "authors": [
