@@ -87,7 +87,7 @@ class WidgetAdd extends \Cetera\Widget\Templateable
 				
 				if (!$_REQUEST['text']) throw new \Exception($this->t->_('Пустой текст'));
 				
-				$material->addComment(nl2br(htmlspecialchars($_REQUEST['text'])), $this->getParam('publish'), $this->application->getUser(), $_REQUEST['nickname'], $rating);
+				$material->addComment(nl2br(htmlspecialchars($_REQUEST['text'])), $this->getParam('publish'), $this->application->getUser(), $_REQUEST['nickname'] ?? null, $rating);
 				$this->statusText = $this->getParam('success_text');
 				
 				if (!$this->getParam('ajaxCall') && $this->getParam('redirect')) {
